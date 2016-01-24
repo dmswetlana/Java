@@ -1,0 +1,30 @@
+//Числа Фибоначчи - элементы последовательности, в которой
+//каждое последующее число равно сумме двух предыдущих чисел.
+//F(0)=0, F(1)=1, F(n)=F(n-1) + F(n-2)
+//мы берём первое и второе число равным единице
+
+public class Fibonachi {
+	
+	public static void main(String[] arg){
+
+	int N =20; // последовательность из 20 чисел
+	int num1=1;
+	int num2=1;//первые два числа равны единице
+	int Fibonachi=0;
+
+	int i=2; //счётчик для цикла
+	
+	System.out.print(num1 + " " + num2); //печать первых двух элементов
+		
+	while (i<N){
+		Fibonachi=num1+num2;
+		num1 = num2;
+		num2 = Fibonachi;
+		System.out.print(" " + Fibonachi);
+		i++;}
+	}
+
+	//второе решение 
+	
+	
+}

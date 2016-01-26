@@ -1,0 +1,15 @@
+
+public class Page88 {
+
+	//динамическая инициализация
+	//находим длину гипотенузы прямоугольного треугольника
+	//по длине его катетов (теорема Пифагора)
+	public static void main(String[] args) {
+		double a=3.0, b = 4.0;
+	
+		double c = Math.sqrt(a*a + b*b);
+		System.out.println("Гипотенуза равна = " + c);
+
+	}
+
+}

@@ -1,0 +1,63 @@
+
+public class Page88 {
+
+	//динамическа€ инициализаци€
+	//находим длину гипотенузы пр€моугольного треугольника
+	//по длине его катетов (теорема ѕифагора)
+	public static void main(String[] args) {
+		double a=3.0, b = 4.0;
+	
+		double c = Math.sqrt(a*a + b*b);
+		System.out.println("√ипотенуза равна = " + c);
+		
+
+	//демонстраци€ области действи€ блока кода
+	int x = 10;  //эта переменна€ доступна всему коду
+	            //из метода main()
+	
+	if (x==10){       //начало новой области действи€,
+		int y = 20;   //доступной только этому блоку кода
+	
+	//обе переменные x, y доступны в этой области действи€
+		System.out.println("x и y: " + x + " " +y);
+			x = y * 2;
+	}
+
+	//y=100; //ќЎ»Ѕ ј! ѕеременна€ y недоступна в этой
+	         //области действи€
+	
+	System.out.println("х равно " + x);
+
+	//демонстраци€ срока действи€ переменной
+	
+	for(x=0; x<3; x++){
+		int y = -1; //переменна€ y инициализируетс€ при
+		            //каждом вхождении в блок кода
+		System.out.println("y = " + y);
+		 y = 100;
+		 System.out.println("теперь y = " + y);
+	}
+	
+	//демонстраци€ приведени€ типов
+	byte b1;
+	int i = 257;
+	double d = 323.142;
+	System.out.println("i = 254; d = 323.142");
+	System.out.println("ѕреобразование типа int в тип byte:");
+	b1 = (byte) i;
+	System.out.println("i и b = " + i + " " + b1);
+	
+	System.out.println("ѕреобразование типа double в тип int:");
+	i = (int)d;
+	System.out.println("d и i = " + d + " " + i);
+	
+	System.out.println("ѕреобразование типа double в тип byte:");
+	b = byte(d);
+	System.out.println("d и b = " + d + " " + b);
+	
+	
+	
+}	
+
+
+}

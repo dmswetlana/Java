@@ -1,0 +1,31 @@
+
+public class Page98Massiv {
+
+	public static void main(String[] args) {
+		// применение двухмерного массива
+		
+		int twoD[][] = new int [4][5];
+		int i, j, k = 0;
+		
+		
+		//элементы массива нумеруются слева направо
+		for (i=0; i<4; i++)
+			for (j=0; i<5; j++){
+				twoD[i][j] = k;
+				k++;
+			}
+		//выводим значения массива
+		
+		for (i=0; i<4; i++)
+			for (j=0; i<5; j++){
+			System.out.print(twoD[i][j] + "  ");
+			System.out.println();
+				
+			}
+		
+		
+		
+		
+		
+}
+}

@@ -1,0 +1,19 @@
+
+public class BasicMath {
+
+	public static void main(String[] args) {
+		// основные арифметические операции
+		
+		int a, b, c, d, e;
+		System.out.println("a=1+1  " + a);
+		System.out.println("b=a*3  " + b);
+		System.out.println("c=b/4  " + c);
+		System.out.println("d=c-a  " + d);
+		System.out.println("e=-d   " + e);
+		
+		//арифметические операции над значениями типа double
+		
+
+	}
+
+}

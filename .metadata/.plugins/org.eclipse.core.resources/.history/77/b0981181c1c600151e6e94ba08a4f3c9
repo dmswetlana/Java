@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import static java.lang.System.out;
+
+public class Crow {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		out.print("Введите число ворон на ветке (0-9): " );
+		int  n = sc.nextInt();
+		
+		String v="";
+		switch(n)
+		{
+		case 1:
+			v ="ворона";
+			break;
+		case 2:
+		case 3:
+		case 4:
+			v = "вороны";
+			break;
+		case 0:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+			v="ворон";
+			break; 
+		}
+		String result = String.format("На ветке %d %s", n,v);
+		
+		out.println(result);
+	}
+
+}

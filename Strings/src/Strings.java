@@ -7,14 +7,19 @@ import static java.lang.System.out;
 //поэтому прописываем полный путь к статическому полю out
 // import static java.lang.System.out;
 
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.Scanner;
 //используем класс Scanner для ввода с консоли.
 //Он позволяет работать с любым потоком и читать строковые
 //данные, числовые данные.
 
+import java.util.Date;
+
 public class Strings {
 
-	public static void main(String[] args){ 
+	public static void main(String[] args)throws IOException { 
 	{	
 		String s1 = "Привет"; //в s1 содержится адрес строки
 		String s2 = new String("Привет");
@@ -99,7 +104,51 @@ public class Strings {
 		
 		}
 	
+		{
+			//вывод в консоль
+			int a=5;
+			int b=7;
+			
+			out.printf("\"a\"= %d\nb= %d\n", a, b);
+			 double d=25;
+			 double d2=1.5;
+			 
+			 out.printf("d= %2$10.2f\nd2=%1$f\n", d2, d/2);
+			 //сначала печатаем второе значение, потом первое
+			 
+			Date now = new Date();
+			out.printf("%1$tY-%1$tB-%1$td\n", now); 			
+		}
 	
-	
+		{
+			//ввод строки с консоли
+			//Метод BufferedReader вводит только строки 
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(System.in));
+			out.println("Введите строку: ");
+			String s = reader.readLine();
+			 out.println(s);
+			 
+			 //для ввода числовых значений пишем в два этапа
+			 //вводится строка и преобразуется в инт методом parseInt
+			 //если пользователь вводит то, что числом не явяется,
+			 //данный метод выдаёт ошибку
+			 
+			 int x = Integer.parseInt(s);
+			 out.println(x);
+			 
+			//можно использовать метод Scanner
+			 Scanner sc = new Scanner(System.in);
+			out.println("Введите два числа:");
+			int x1 =  sc.nextInt();
+			int x2 = sc.nextInt();
+			out.printf("x1=%d\nx2=%d\n", x1, x2);
+			
+			//после работы с методом next, закрываем его
+			sc.close();
+			
+			
+		}
+		
 	}
 }

@@ -1,0 +1,75 @@
+//¬ этом классе определ€етс€ целочисленный стек, в котором
+//можно хранить до 10 целочисленных значений
+
+public class Stack {
+
+	int stck [] = new int [10];
+		int tos; 
+		
+		//инициализируем вершину стека
+		Stack(){
+			tos = -1;
+		}
+		
+		//разместить элемент в стеке
+		void push (int team){
+			if (tos==9)
+				System.out.println("—тек заполнен");
+			else
+				stck[++tos] = team;
+		}
+		
+		//извлечь элемент их стека
+		int pop (){
+			if (tos<0)
+			{
+				System.out.println("—тек пустой");
+				return 0;
+			}
+			else 
+				return stck[tos--];
+		}
+		
+		
+	public static void main(String[] args) {
+		
+		Stack mystack1 = new Stack();
+		Stack mystack2 = new Stack();
+		
+		//разместить числа в стеке
+		for (int i=0; i<10; i++)
+		{
+			mystack1.push(i);
+			System.out.print(" " + i );
+		}
+			System.out.println();
+		
+		for (int i=10; i<20; i++)
+		{
+			mystack2.push(i);
+			System.out.print(" " + i);
+		}
+		System.out.println();
+		
+		//извлекаем эти числа из стека
+		System.out.println("—одержимое стека 1:");
+		for(int i=0; i<10; i++)
+			System.out.print(mystack1.pop()+ " ");
+		System.out.println();
+		
+		System.out.println("—одержимое стека 2:");
+		for (int i =0; i<10; i++)
+			System.out.print(mystack2.pop() + " ");
+		System.out.println();
+		
+				
+		
+			
+		
+		
+		
+				
+		
+	}
+
+}

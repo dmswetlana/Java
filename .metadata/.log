@@ -1078,3 +1078,97 @@ org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 !SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-02-03 22:11:08.898
 !MESSAGE Provided SVN information does not match that on disk for project 'Stack'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2016-02-03 22:45:26.358
+!MESSAGE Could not auto-share project Overload
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'Overload'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-02-03 22:45:26.358
+!MESSAGE Provided SVN information does not match that on disk for project 'Overload'.
+!SESSION 2016-02-03 23:00:23.178 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_72
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-03 23:01:27.272
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.debug.core 4 2 2016-02-03 23:01:28.719
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(Unknown Source)
+	at java.util.ArrayList$Itr.next(Unknown Source)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.getLineTrackers(ProcessConsoleManager.java:270)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole.<init>(ProcessConsole.java:226)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.launchChanged(ProcessConsoleManager.java:145)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:458)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:438)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1048)
+	at org.eclipse.debug.core.Launch.fireChanged(Launch.java:393)
+	at org.eclipse.debug.core.Launch.addProcess(Launch.java:355)
+	at org.eclipse.debug.core.model.RuntimeProcess.<init>(RuntimeProcess.java:126)
+	at org.eclipse.debug.core.DebugPlugin.newProcess(DebugPlugin.java:787)
+	at org.eclipse.jdt.launching.AbstractVMRunner.newProcess(AbstractVMRunner.java:170)
+	at org.eclipse.jdt.internal.launching.StandardVMRunner.run(StandardVMRunner.java:424)
+	at org.eclipse.jdt.launching.JavaLaunchDelegate.launch(JavaLaunchDelegate.java:102)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 120 2016-02-03 23:01:30.003
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(Unknown Source)
+	at java.util.ArrayList$Itr.next(Unknown Source)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.getLineTrackers(ProcessConsoleManager.java:270)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole.<init>(ProcessConsole.java:226)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.launchChanged(ProcessConsoleManager.java:145)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:458)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:438)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1048)
+	at org.eclipse.debug.core.Launch.fireChanged(Launch.java:393)
+	at org.eclipse.debug.core.Launch.addProcess(Launch.java:355)
+	at org.eclipse.debug.core.model.RuntimeProcess.<init>(RuntimeProcess.java:126)
+	at org.eclipse.debug.core.DebugPlugin.newProcess(DebugPlugin.java:787)
+	at org.eclipse.jdt.launching.AbstractVMRunner.newProcess(AbstractVMRunner.java:170)
+	at org.eclipse.jdt.internal.launching.StandardVMRunner.run(StandardVMRunner.java:424)
+	at org.eclipse.jdt.launching.JavaLaunchDelegate.launch(JavaLaunchDelegate.java:102)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 2 2 2016-02-03 23:09:42.684
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob
+!SESSION 2016-02-03 23:09:42.769 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_72
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-03 23:10:14.438
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

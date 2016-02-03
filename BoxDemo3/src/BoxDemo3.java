@@ -1,5 +1,5 @@
 //применение конструктора для инициализации переменных
-
+// перегрузка методов-конструкторов
 
 		class Box{
 			double width;
@@ -7,7 +7,7 @@
 			double depth;
 			
 			
-	//конструктор класса Box
+	//конструктор класса Box с указанием всех размеров
 			Box(double w, double h, double d){
 				System.out.println("Конструирование объекта Box");
 				width = w;
@@ -15,7 +15,21 @@
 				depth = d;
 			}
 			
-			//рассчитаем объём параллелепипеда
+	//конструктор, когда ни один из размеров не указан
+			Box(){
+				width = -1;  //использовать значение -1 для
+				heigth = -1; //обозначения неинициализированного
+				depth = -1;  //параллелепипеда
+				
+			}
+	
+	//конструктор, используемый при создании куба
+				Box (double len){
+					width = heigth = depth = len;
+				}		
+			
+			
+	//рассчитаем объём параллелепипеда
 			
 			double volume() {
 				return (width*heigth*depth);
@@ -25,17 +39,20 @@
 public class BoxDemo3 {
 			public static void main(String[] args) {
 				Box mybox1 = new Box(10, 20, 15);
-				Box mybox2 = new Box(3, 6, 9);
+				Box mybox2 = new Box( );
+				Box mybox3 = new Box(7);
 				
 				double vol;
 				
 				vol = mybox1.volume();
-				System.out.println("Объём " + vol);
+				System.out.println("Объём mybox1 = " + vol);
 
 				vol = mybox2.volume();				
-				System.out.println("Объём " + vol);
+				System.out.println("Объём  mybox2 = " + vol);
 				
-				
+				vol = mybox3.volume();				
+				System.out.println("Объём  mybox3 = " + vol);
+			
 				
 			}
 

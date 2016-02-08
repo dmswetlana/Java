@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class StringHome {
+	
+		
+	public static void main(String[] args) {
+		Scanner	 sc = new Scanner(System.in);
+		char simvol;
+		System.out.println("Введите строку для проверки: ");
+		String stroka = sc.nextLine();
+		System.out.println("Вы ввели строку: " + stroka);
+		System.out.println("Длина строки = " + stroka.length());
+// вводим строку в массив
+		int massiv[] = new int[255];
+		for (int i=0; i<stroka.length(); i++)
+		{
+			simvol=stroka.charAt(i);
+			massiv[i] = simvol;
+			System.out.println(i + " символ = " + simvol );		
+		}
+
+//выводим встретившихся символов
+		
+	}
+
+}

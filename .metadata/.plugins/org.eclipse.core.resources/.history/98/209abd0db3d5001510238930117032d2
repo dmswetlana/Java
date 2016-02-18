@@ -1,0 +1,13 @@
+//класс Person (имя, возраст) 
+public class Person 
+{
+	public String name;
+	public int age;
+	
+	//метод show выводит в консоль имя и возраст 
+	public void show(){
+		System.out.printf("%s - %d \n", name, age);
+	}
+	
+	
+}

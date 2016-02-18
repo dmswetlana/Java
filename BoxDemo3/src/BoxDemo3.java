@@ -5,7 +5,13 @@
 			double width;
 			double heigth;
 			double depth;
-			
+		
+			//в качестве параметра используется объект типа Box
+			Box(Box ob){
+			width = ob.width;
+			heigth = ob.heigth;
+			depth = ob.depth;
+			}
 			
 	//конструктор класса Box с указанием всех размеров
 			Box(double w, double h, double d){
@@ -41,6 +47,7 @@ public class BoxDemo3 {
 				Box mybox1 = new Box(10, 20, 15);
 				Box mybox2 = new Box( );
 				Box mybox3 = new Box(7);
+				Box myclone = new Box(mybox1);
 				
 				double vol;
 				
@@ -53,7 +60,8 @@ public class BoxDemo3 {
 				vol = mybox3.volume();				
 				System.out.println("Объём  mybox3 = " + vol);
 			
-				
+				vol = myclone.volume();
+				System.out.println("Объём клона = " + vol);
 			}
 
 		}

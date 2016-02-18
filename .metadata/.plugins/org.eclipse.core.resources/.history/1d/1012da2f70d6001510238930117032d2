@@ -1,0 +1,14 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		Point p1 = new Point();
+		
+		p1.move(50, 70);
+		p1.color = "red";
+		p1.draw();
+		
+
+	}
+
+}

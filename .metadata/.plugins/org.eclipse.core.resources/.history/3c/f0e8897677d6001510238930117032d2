@@ -1,0 +1,27 @@
+//базовый класс унаследован от Object
+public class GraphObject {
+	public static final String DEFAULT_COLOR = "Black";
+	public String color;
+
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+
+	
+	public void draw(){
+		System.out.printf("GraphObject %s \n", color);
+	}
+	
+	public GraphObject(){
+		this(DEFAULT_COLOR);
+	}
+	
+	public GraphObject (String color){
+		this.color = color;
+	}
+	
+	
+}

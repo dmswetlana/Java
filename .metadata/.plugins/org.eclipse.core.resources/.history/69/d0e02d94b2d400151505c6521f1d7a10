@@ -1,0 +1,22 @@
+//Создание класса Person и конструкторов и методов  в нём
+public class Program 
+{
+	
+	public static void sayHello()
+	{
+		System.out.println("Привет");
+	}
+	
+	
+	public static void main(String[] args) {
+
+//так вызываем, еслт метод sayHello cтатический
+//		sayHello();
+//		Program.sayHello();
+		
+		Program p = new Program();
+		p.sayHello();
+		
+	}
+
+}

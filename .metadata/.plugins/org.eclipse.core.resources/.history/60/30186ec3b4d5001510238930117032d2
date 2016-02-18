@@ -1,0 +1,29 @@
+//класс Person (имя, возраст) 
+public class Person 
+{
+	public String name;
+	public int age;
+	
+	//создаём конструктор для этого класса с двумя параметрами
+	public Person(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+
+	//создаём конструктор для этого класса без параметров
+		public Person(){
+			this.name = "Незнакомец";
+			this.age = 10;
+		}
+	
+	
+	//метод show выводит в консоль имя и возраст 
+	public void show(){
+		System.out.printf("%s - %d \n", this.name, this.age);
+	}
+	
+	
+	
+	
+	
+}

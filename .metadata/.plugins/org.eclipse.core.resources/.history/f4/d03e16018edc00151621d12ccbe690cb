@@ -1,0 +1,17 @@
+//создаём класс клиент банка
+//списываем с его счёта сумму на другой счёт
+public class Programm {
+
+	public static void main(String[] args) {
+		
+		
+		BankAccount b1 = new BankAccount("Name1", 1000);
+		BankAccount b2 = new BankAccount("Name2");
+		
+		b1.deposit(500);
+		b1.toString();
+		
+
+	}
+
+}

@@ -1,0 +1,15 @@
+//простой метод рекурсии, факториал
+public class Program {
+
+	int fact (int n)
+	{
+		int result;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

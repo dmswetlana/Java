@@ -1,6 +1,6 @@
 //создаём класс от GraphObject
 
-public class Point extends GraphObject  {
+public class Point extends GraphObject implements Cloneable {
 
 	public int x=0;
 	public int y=0;
@@ -44,4 +44,9 @@ public class Point extends GraphObject  {
 		return String.format("Point (%d,%d) %s", x, y, super.color);
 	}
 	
+	@Override
+	public Point clone(){
+		
+		return new Point(x,y,color);
+	}
 }

@@ -15,7 +15,7 @@ public class Circle extends GraphObject{
 	
 	public Circle(Point center, int radius, String color) {
 		super(color);
-		this.center = center;
+		this.center = center.clone();
 		this.radius = radius;
 	}
 	

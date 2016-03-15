@@ -1,0 +1,30 @@
+package ru.specialist;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Outer o = new Outer(10);
+		
+		Outer.Nested n = new Outer.Nested();
+		n.updateOuterData(o);
+	System.out.println(o.getData());
+	
+		Outer.l.multiple();
+		System.out.println(o.getData());
+		Outer.l2.multiple();
+		System.out.println(o.getData());
+		
+		Outer.Inner inner = o.new Inner();
+		inner.updateOuterData();
+	
+		Invoice inv = new Invoice("Рога & копыта");
+		//создаём строки накладной
+		//inv.new Line("Book",2,100);
+		Invoice.Line l1=inv.new Line("Book",2,100);
+		inv.new Line("Dvd",3,400);
+		l1.setQuantity(1);
+		//System.out.println(inv);	
+	
+	}
+}

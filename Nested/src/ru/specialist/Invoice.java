@@ -1,0 +1,121 @@
+package ru.specialist;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Invoice {
+
+	private  String contragent;
+	private double total;
+	
+	//коллекция List типизированная строками Line
+	private List<Line> lines = new ArrayList<Line>();
+	
+	
+	public String getContragent() {
+		return contragent;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public Invoice(String contragent) {
+		super();
+		this.contragent = contragent;
+	}
+
+	public void setContragent(String contragent) {
+		this.contragent = contragent;
+	}
+
+	@Override
+	public String toString() {
+	//перебираем строчки и формируем длинную строку в цикле
+	//сначала добавляем строку, которую получили 
+	//форматированием заголовка 
+	
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(String.format("%-20s : %7.2f\n", getContragent(), getTotal()));
+		sb.append("--------------------\n");
+	//перебираем строки накладной
+		for(Line line : lines)
+		sb.append(line.toString()).append("\n");
+		return sb.toString();
+	//в StringBuilder сформировали представление накладной
+	}
+	
+	
+	//создаём Inner класс
+	public class Line {
+		
+		private String good; //товар
+		private int quantity; //количество
+		private double price; //цена
+		private double summa; //сумма по строке
+	
+		//метод для расчёта суммы из количества и цены
+		private void updateSumma(boolean update)
+		{
+			//Если сумму меняем, то сначала удалим предыдущую сумму
+			if(update)
+				total -=summa;
+			summa = quantity*price;
+			total += summa; //общая сумма накладной
+		}
+		
+		
+			
+		//конструктор для трёх полей
+		public Line(String good, int quantity, double price) {
+			super();
+			this.good = good;
+			this.quantity = quantity;
+			this.price = price;
+			updateSumma(false);
+			//здесь добавляем в коллекцию строки
+			lines.add(this); //поле из внешнего объекта		
+		}
+
+		public String getGood() {
+			return good;
+		}
+
+		public void setGood(String good) {
+			this.good = good;
+		}
+
+		public int getQuantity() {
+			return quantity;
+		}
+
+		public void setQuantity(int quantity) {
+			this.quantity = quantity;
+			updateSumma(true); //обновили сумму, если изменили кол-во
+		}
+
+		public double getPrice() {
+			return price;
+		}
+
+		public void setPrice(double price) {
+			this.price = price;
+			updateSumma(true); //обновили сумму изменив цену
+		}
+
+		public double getSumma() {
+			return summa;
+		}
+	
+		@Override
+	public String toString() {
+		
+		return String.format("%20s: %4d %6.2f %7.2",
+				getGood(), getQuantity(), getPrice(), getSumma());
+	}
+	
+	
+	}
+	
+}

@@ -1,0 +1,44 @@
+
+package ru.specialist;
+
+public class MyTest {
+
+	//создаЄм Nested класс - вложенный класс
+	// имеет ключевое слово static  и не зависит
+	// от экземпл€рa внешнего класса
+	public static class MyNested
+	{
+		public String NestedField = "Nested class";
+		
+		public void nestedShow()
+		{
+			System.out.println(NestedField);
+		}
+	}
+	
+	
+	//создаЄм Inner класс - вложенный класс
+	// не имеет ключевое слово static  и зависит
+	// от экземпл€рa внешнего класса
+		public  class MyInner
+		{
+			public String InnerField = "Inner class";
+			
+			public void innerShow()
+			{
+				System.out.println(InnerField);
+			}
+		}
+		
+	
+	public String outerField = "Test class (outer)";
+	public void show()
+	{
+		System.out.println(outerField);
+	}
+	
+	//создаЄм класс Bank в нЄм inner класс и с ним работаем
+	
+	
+	
+}

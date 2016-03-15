@@ -1,0 +1,26 @@
+
+package ru.specialist;
+
+public class MyTest {
+
+	//создаём Nested класс
+	public static class MyNested
+	{
+		public String NestedField = "Nested class";
+		
+		public void nestedShow()
+		{
+			System.out.println(NestedField);
+		}
+	}
+	
+	
+	public String outerField = "Test class (outer)";
+	public void show()
+	{
+		System.out.println(outerField);
+	}
+	
+	
+	
+}

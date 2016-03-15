@@ -61,4 +61,17 @@ public class GraphObject {
 		
 	}
 	
+	//метод перемещения сцены movie
+	
+	public static void movieScene(int dx, int dy){
+		for(GraphObject g : scene)
+		{
+			if (g instanceof Movieable)
+			{
+				Movieable c = (Movieable)g;	
+				c.movie(dx,dy);
+			}
+		}
+		
+	}
 }

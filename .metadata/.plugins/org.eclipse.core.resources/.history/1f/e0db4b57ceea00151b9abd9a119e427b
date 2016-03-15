@@ -1,0 +1,12 @@
+package ru.specialist;
+
+public class MyTest {
+
+	public void show()
+	{
+		System.out.println("Hello!");
+	}
+	
+	
+	
+}

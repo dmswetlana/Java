@@ -24,7 +24,7 @@ access level		modifier		visibility
 
 //создаём класс от GraphObject
 
-public class Point extends GraphObject implements Cloneable {
+public class Point extends GraphObject implements Cloneable, Movieable {
 
 	int x=0;
 	int y=0;
@@ -89,5 +89,13 @@ public class Point extends GraphObject implements Cloneable {
 	public Point clone(){
 		
 		return new Point(x,y,color);
+	}
+	
+
+	public void movie(int dx, int dy) {
+		this.x = this.x+dx; //x +=dx;
+		this.y = this.y+dy; //y +=dy;
+		 System.out.printf("x+dx = %d; y+dy = %d \n", x, y);
+		
 	}
 }

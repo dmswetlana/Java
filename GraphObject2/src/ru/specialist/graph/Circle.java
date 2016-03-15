@@ -68,4 +68,6 @@ public class Circle extends GraphObject implements Scaleable
 		setRadius((int)(radius*factor));
 	}
 
+
+
 }

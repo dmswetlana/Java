@@ -1,0 +1,39 @@
+//простой внешний класс
+package ru.specialist;
+
+public class Outer {
+
+	public static class Nested{
+		public void updateOuterData(Outer o){
+			o.data++;
+		}
+	}
+	
+	public class Inner{
+		public void updateOuterData(){
+			data++;
+		}
+	}
+	private int data = 0;
+
+	
+	
+	
+	
+	//конструктор
+	public Outer(int data) {
+		super();
+		this.data = data;
+//		Nested n;
+	}
+
+	
+	public int getData() {
+		return data;
+	}
+
+	public void setData(int data) {
+		this.data = data;
+	}
+	
+}

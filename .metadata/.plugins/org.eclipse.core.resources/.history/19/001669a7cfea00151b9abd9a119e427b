@@ -1,0 +1,25 @@
+
+package ru.specialist;
+
+public class MyTest {
+
+	//создаём Inner класс
+	class MyInner
+	{
+		public String innerField = "Inner class";
+		public void innerShow()
+		{
+			System.out.println(innerField);
+		}
+	}
+	
+	
+	public String outerField = "Test class (outer)";
+	public void show()
+	{
+		System.out.println(outerField);
+	}
+	
+	
+	
+}

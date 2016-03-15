@@ -3,4 +3,10 @@
 <fullyQualifiedTypeName name="org.omg.Messaging.SyncScopeHelper"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="ru.specialist.Outer.Nested"/>
+<fullyQualifiedTypeName name="ru.specialist.Outer.Inner"/>
+<fullyQualifiedTypeName name="ru.specialist.Invoice.Line"/>
+<fullyQualifiedTypeName name="ru.specialist.MyTest.MyNested"/>
+<fullyQualifiedTypeName name="ru.specialist.MyTest.MyInner"/>
+<fullyQualifiedTypeName name="ru.specialist.Bank.Account"/>
 </qualifiedTypeNameHistroy>

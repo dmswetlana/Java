@@ -1,0 +1,20 @@
+package ru.sprcialist;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Switcher sw = new Switcher();
+		Lamp lamp = new Lamp();
+		TVSet tv = new TVSet();
+	
+		//подписываемся на событие у Switcher, передавая ему
+		//в качестве параметра сначала лампу, потом ТV
+
+		sw.addElectricityListener(lamp);
+		sw.addElectricityListener(tv);
+		
+		sw.switchOn();
+	}
+
+}
